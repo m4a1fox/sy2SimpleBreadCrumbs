@@ -1,0 +1,10 @@
+services:
+    jauto.twig.bread_crumbs_extension:
+        class: Folder\MyBundle\Twig\JAutoBreadCrumbsExtension
+        tags:
+            - { name: twig.extension }
+        arguments: [@service_container]
+
+    bread_crumbs:
+        class: Folder\MyBundle\Service\BreadCrumbs
+        arguments: [>, orange]
